@@ -17,7 +17,9 @@ function App() {
     <main className='flex flex-col min-h-[80vh] justify-center items-center max-w-xl w-full mx-auto'>
       <h1 className='text-4xl text-indigo-500'>IQBAL AI</h1>
       <div className='max-w-xl pb-10'>
-      <SyntaxHighlight language='swift' style={darcula} wrapLongLines={true}>{data}</SyntaxHighlight> {/* Placeholder to push content above */}
+      {data ? (
+      <SyntaxHighlight language='swift' style={darcula} wrapLongLines={true}>{data}</SyntaxHighlight>
+      ) : null}
       </div>
       <div className='fixed bottom-0 left-0 w-full shadow-md p-4'>
         <form className='flex items-center gap-2'>
